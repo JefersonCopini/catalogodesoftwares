@@ -49,7 +49,7 @@ export default function Footer(){
   </div>
   <div className="text-center text-white mt-8 border-t">
     <p>
-      ©Copyright UTFPR 2023-2 by <spam> Alunos de Web </spam>| all rights
+      ©Copyright UTFPR 2023-2 by  Alunos de Web | all rights
       reserved!
     </p>
   </div>
