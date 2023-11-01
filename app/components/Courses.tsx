@@ -1,7 +1,8 @@
 import { url } from "inspector"
 import { title } from "process"
+import {sql} from "@vercel/postgres"
 
-export default function Courses() {
+export default async function Courses() {
 
     const courses = [
         { title: "Curso de HTML", url: "/img/html.svg", description: "O curso é realizado por..." },
@@ -14,6 +15,9 @@ export default function Courses() {
 
 
     ]
+    const { rows } = await sql`SELECT * from courses `;
+
+
 
     return (
         <main className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -23,7 +27,8 @@ export default function Courses() {
                 </h2>
             </div>
             {
-                courses.map((course) => {
+                
+                rows.map((course) => {
                     return (
                         <div key={course.title} className="bg-[#4d4d4d] rounded-md pb-2">
                             <a href="/curso_html.html">
