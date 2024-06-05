@@ -1,5 +1,5 @@
 export default function NewCourse(){
-    function saveCourse(){
+   async function saveCourse(){
         "use server"
         console.log("Acessou a função")
     }
