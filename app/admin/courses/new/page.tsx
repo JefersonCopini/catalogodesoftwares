@@ -4,6 +4,7 @@ export default function NewCourse(){
         console.log("Acessou a função")
     }
     return(
+        
         <div>
             <h1 className="text-white text-center text-4xl"> Cadastrar curso</h1>
             <form>
@@ -14,5 +15,7 @@ export default function NewCourse(){
 
             </form>
         </div>
+        
+        
     )
 }
